@@ -41,7 +41,7 @@ export default function HeroBanner() {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for a movie or tv show..."
             />
-            <button>Search</button>
+            <button onClick={()=>navigate(`/search/${query}`)}>Search</button>
           </div>
         </div>
       </ContentWrapper>

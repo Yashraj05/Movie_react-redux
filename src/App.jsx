@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { fetchDataFromApi } from "./utils/api"
 import { useSelector,useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { HashRouter,Routes,Route } from "react-router-dom";
+import { Routes,Route, BrowserRouter } from "react-router-dom";
 
 
 import Header from './components/header/Header'
@@ -59,7 +59,7 @@ export default function App() {
 
   return (
     <div>
-      <HashRouter>
+      <BrowserRouter>
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
@@ -69,7 +69,7 @@ export default function App() {
           <Route path="*" element={<PageNotFound></PageNotFound>}></Route>        
         </Routes>
         <Footer> </Footer>
-      </HashRouter>
+      </BrowserRouter>
       </div>
   )
 }
